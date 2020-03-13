@@ -1,3 +1,35 @@
 html, body {
     margin: 0;
 }
+
+#buttons {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+#buttons > input {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+#buttons > input:hover {
+    background-color: rgb(43, 40, 40);
+} 
+
+#buttons > input:active{
+    background-color: rgb(43, 40, 40);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+

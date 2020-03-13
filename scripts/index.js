@@ -1,5 +1,6 @@
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
+const clearAll = document.getElementById('clear');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -39,6 +40,10 @@ function draw(e) {
     }
 }
 
+function clear() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY];
@@ -46,3 +51,5 @@ canvas.addEventListener('mousedown', (e) => {
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
+
+clearAll.addEventListener('click', clear);
